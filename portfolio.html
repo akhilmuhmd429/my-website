@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+
+    <meta property="og:title" content="Muhammed Akhil M A - Portfolio" />
+    <meta property="og:description" content="Full Stack Dotnet Developer & Web Designer Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Muhammed Akhil M A - Portfolio" />
+    <meta name="twitter:description" content="Full Stack Dotnet Developer & Web Designer Portfolio" />
+
+    <title>Muhammed Akhil M A - Portfolio</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: 'hsl(222 47% 11%)',
+              foreground: 'hsl(210 40% 98%)',
+              card: 'hsl(222 47% 11%)',
+              'card-foreground': 'hsl(210 40% 98%)',
+              primary: 'hsl(263 70% 50%)',
+              'primary-foreground': 'hsl(210 40% 98%)',
+              secondary: 'hsl(217 19% 27%)',
+              'secondary-foreground': 'hsl(210 40% 98%)',
+              muted: 'hsl(217 19% 27%)',
+              'muted-foreground': 'hsl(215 20% 65%)',
+              accent: 'hsl(190 90% 50%)',
+              'accent-foreground': 'hsl(222 47% 11%)',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="bg-background text-foreground font-sans antialiased selection:bg-primary selection:text-white">
+    
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-white/10">
+      <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+        <a href="#" class="flex items-center gap-2 font-display font-bold text-2xl tracking-tighter hover:text-primary transition-colors">
+          <i data-lucide="code-2" class="w-8 h-8 text-primary"></i>
+          <span>Akhil<span class="text-primary">.Dev</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#services" class="text-sm font-medium hover:text-primary transition-colors">Services</a>
+          <a href="#portfolio" class="text-sm font-medium hover:text-primary transition-colors">Portfolio</a>
+          <a href="#contact" class="text-sm font-medium hover:text-primary transition-colors">Contact</a>
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-primary text-primary hover:bg-primary hover:text-white h-10 px-4 py-2">
+            Hire Me
+          </button>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 text-foreground">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 right-0 bg-background border-b border-white/10 p-6 flex flex-col gap-4 shadow-xl">
+        <a href="#services" class="mobile-link text-lg font-medium hover:text-primary transition-colors">Services</a>
+        <a href="#portfolio" class="mobile-link text-lg font-medium hover:text-primary transition-colors">Portfolio</a>
+        <a href="#contact" class="mobile-link text-lg font-medium hover:text-primary transition-colors">Contact</a>
+        <button class="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
+          Hire Me
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <div class="absolute inset-0 z-0 bg-grid-pattern">
+        <div class="absolute inset-0 bg-gradient-to-b from-background/80 via-background/50 to-background"></div>
+      </div>
+
+      <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="hero-content opacity-0 translate-y-10 transition-all duration-1000">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-mono mb-6">
+            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+            Available for Freelance
+          </div>
+          
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Hi, I'm <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Muhammed Akhil M A</span>
+          </h1>
+          
+          <p class="text-xl text-muted-foreground mb-8 max-w-lg">
+            Full Stack .NET Developer & Web Designer.
+            I build robust applications using C#, HTML, CSS, and jQuery.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <a href="#portfolio" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-12 px-8">
+              View Portfolio <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+            </a>
+            <a href="#contact" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-12 px-8 border-white/20 hover:bg-white/5">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <!-- Floating Cards -->
+        <div class="relative hidden lg:block hero-visual opacity-0 scale-90 transition-all duration-1000 delay-300">
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px]"></div>
+          
+          <div class="grid grid-cols-2 gap-6 relative">
+            <div class="hover-card bg-card/50 backdrop-blur-sm border border-white/10 p-6 rounded-2xl transition-transform duration-300 hover:-translate-y-2">
+              <i data-lucide="terminal" class="w-10 h-10 text-accent mb-4"></i>
+              <h3 class="text-lg font-bold mb-2">Backend</h3>
+              <p class="text-sm text-muted-foreground">C#, .NET Core, SQL Server, Microservices</p>
+            </div>
+
+            <div class="hover-card bg-card/50 backdrop-blur-sm border border-white/10 p-6 rounded-2xl mt-12 transition-transform duration-300 hover:-translate-y-2">
+              <i data-lucide="layout" class="w-10 h-10 text-primary mb-4"></i>
+              <h3 class="text-lg font-bold mb-2">Frontend</h3>
+              <p class="text-sm text-muted-foreground">HTML, CSS, jQuery, Bootstrap, Responsive Design</p>
+            </div>
+
+            <div class="hover-card bg-card/50 backdrop-blur-sm border border-white/10 p-6 rounded-2xl transition-transform duration-300 hover:-translate-y-2">
+              <i data-lucide="database" class="w-10 h-10 text-purple-400 mb-4"></i>
+              <h3 class="text-lg font-bold mb-2">Database</h3>
+              <p class="text-sm text-muted-foreground">PostgreSQL, Redis, Entity Framework</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-secondary/20">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16 fade-in-up opacity-0 translate-y-10 transition-all duration-700">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">My Services</h2>
+          <p class="text-muted-foreground max-w-2xl mx-auto">
+            Combining technical expertise with creative design to deliver comprehensive web solutions.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service Items -->
+          <div class="service-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-100">
+            <div class="bg-card/50 backdrop-blur border border-white/5 hover:border-primary/50 transition-colors group h-full rounded-xl p-6">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <i data-lucide="monitor" class="w-6 h-6 text-primary group-hover:scale-110 transition-transform"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Web Design</h3>
+              <p class="text-sm text-muted-foreground">Creating beautiful, responsive interfaces using HTML5, CSS3, and jQuery for dynamic interactions.</p>
+            </div>
+          </div>
+
+          <div class="service-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-200">
+            <div class="bg-card/50 backdrop-blur border border-white/5 hover:border-primary/50 transition-colors group h-full rounded-xl p-6">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <i data-lucide="server" class="w-6 h-6 text-primary group-hover:scale-110 transition-transform"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
+              <p class="text-sm text-muted-foreground">Robust server-side solutions using C# .NET Core, ensuring high performance and security.</p>
+            </div>
+          </div>
+
+          <div class="service-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-300">
+            <div class="bg-card/50 backdrop-blur border border-white/5 hover:border-primary/50 transition-colors group h-full rounded-xl p-6">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <i data-lucide="code" class="w-6 h-6 text-primary group-hover:scale-110 transition-transform"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Full Stack Solutions</h3>
+              <p class="text-sm text-muted-foreground">End-to-end application development connecting powerful backends with intuitive frontends.</p>
+            </div>
+          </div>
+
+          <div class="service-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-400">
+            <div class="bg-card/50 backdrop-blur border border-white/5 hover:border-primary/50 transition-colors group h-full rounded-xl p-6">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <i data-lucide="smartphone" class="w-6 h-6 text-primary group-hover:scale-110 transition-transform"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Responsive Design</h3>
+              <p class="text-sm text-muted-foreground">Websites that look and function perfectly across all devices, from mobile to desktop.</p>
+            </div>
+          </div>
+
+          <div class="service-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-500">
+            <div class="bg-card/50 backdrop-blur border border-white/5 hover:border-primary/50 transition-colors group h-full rounded-xl p-6">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <i data-lucide="database" class="w-6 h-6 text-primary group-hover:scale-110 transition-transform"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">Database Architecture</h3>
+              <p class="text-sm text-muted-foreground">Designing efficient database schemas and optimizing queries for data-heavy applications.</p>
+            </div>
+          </div>
+
+           <div class="service-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-600">
+            <div class="bg-card/50 backdrop-blur border border-white/5 hover:border-primary/50 transition-colors group h-full rounded-xl p-6">
+              <div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                <i data-lucide="globe" class="w-6 h-6 text-primary group-hover:scale-110 transition-transform"></i>
+              </div>
+              <h3 class="text-xl font-semibold mb-2">API Integration</h3>
+              <p class="text-sm text-muted-foreground">Seamlessly connecting third-party services and building RESTful APIs.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6 fade-in-up opacity-0 translate-y-10 transition-all duration-700">
+          <div>
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <p class="text-muted-foreground">
+              A selection of my recent work in web design and development.
+            </p>
+          </div>
+          <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground border-primary text-primary h-10 px-4 py-2">
+            View All Projects
+          </button>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Project 1 -->
+          <div class="project-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-100 group relative overflow-hidden rounded-xl border border-white/10 bg-card">
+            <div class="aspect-video overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80" 
+                alt="E-Commerce Platform"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div class="flex gap-2 mb-3">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary/20 text-primary border-primary/20">.NET Core</span>
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary/20 text-primary border-primary/20">React</span>
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary/20 text-primary border-primary/20">SQL Server</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">E-Commerce Platform</h3>
+                <p class="text-sm text-gray-300 mb-4">A comprehensive e-commerce solution with inventory management, payment processing, and admin dashboard.</p>
+                <div class="flex gap-4">
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3">
+                    <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Live Demo
+                  </button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3">
+                    <i data-lucide="github" class="w-4 h-4 mr-2"></i> Source Code
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-200 group relative overflow-hidden rounded-xl border border-white/10 bg-card">
+            <div class="aspect-video overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" 
+                alt="Corporate Website"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            </div>
+            
+            <div class="absolute inset-0 bg-gradient-to-t from-background/90 via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+              <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div class="flex gap-2 mb-3">
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary/20 text-primary border-primary/20">HTML</span>
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary/20 text-primary border-primary/20">CSS</span>
+                  <span class="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 bg-primary/20 text-primary border-primary/20">jQuery</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">Corporate Website</h3>
+                <p class="text-sm text-gray-300 mb-4">Modern corporate website with smooth scroll animations and interactive elements.</p>
+                <div class="flex gap-4">
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-9 px-3">
+                    <i data-lucide="external-link" class="w-4 h-4 mr-2"></i> Live Demo
+                  </button>
+                  <button class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-3">
+                    <i data-lucide="github" class="w-4 h-4 mr-2"></i> Source Code
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24 bg-secondary/20 relative overflow-hidden">
+      <!-- Decorative background elements -->
+      <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+      <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+
+      <div class="container mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-start">
+          <div class="fade-in-up opacity-0 translate-y-10 transition-all duration-700">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
+            <p class="text-muted-foreground mb-8 text-lg">
+              Have a project in mind? Looking for a freelance developer? 
+              I'm currently available for new opportunities.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <i data-lucide="mail" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Email</h3>
+                  <p class="text-muted-foreground">hello@example.com</p>
+                </div>
+              </div>
+              
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <i data-lucide="phone" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Phone</h3>
+                  <p class="text-muted-foreground">+1 (555) 123-4567</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold">Location</h3>
+                  <p class="text-muted-foreground">San Francisco, CA (Remote Available)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-8 bg-card/50 backdrop-blur border border-white/10 rounded-xl fade-in-up opacity-0 translate-y-10 transition-all duration-700 delay-200">
+            <form id="contact-form" class="space-y-6">
+              <div class="space-y-2">
+                <label for="name" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Name</label>
+                <input type="text" id="name" placeholder="John Doe" class="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+              </div>
+              
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Email</label>
+                <input type="email" id="email" placeholder="john@example.com" class="flex h-10 w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+              </div>
+              
+              <div class="space-y-2">
+                <label for="message" class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Message</label>
+                <textarea id="message" placeholder="Tell me about your project..." class="flex min-h-[150px] w-full rounded-md border border-input bg-background/50 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"></textarea>
+              </div>
+
+              <button type="submit" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full">
+                <i data-lucide="send" class="w-4 h-4 mr-2"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <footer class="py-8 border-t border-white/10 text-center text-muted-foreground text-sm">
+      <p>© 2025 Muhammed Akhil M A. Built with HTML, CSS & jQuery.</p>
+    </footer>
+
+    <!-- Main Logic -->
+    <script src="script.js"></script>
+  </body>
+</html>
